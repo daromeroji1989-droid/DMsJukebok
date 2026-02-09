@@ -5,4 +5,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: './', // Añadido para resolver rutas relativas en Docker
+  build: {
+    rollupOptions: {
+      input: 'index.html',
+    },
+  },
 })
